@@ -29,7 +29,7 @@ const Register = () => {
     setLoading(true);
 
     try {
-      const res = await API.post("/auth/register", form);
+      await API.post("/auth/register", form);
 
       toast.success("🎉 Registration successful! Please check your email.");
       navigate("/");
